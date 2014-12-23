@@ -1,0 +1,39 @@
+{
+  "name": "clipr",
+  "version": "1.0.0",
+  "description": "edit and save clips of youtube videos",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisdevwords/clipr.git"
+  },
+  "keywords": [
+    "youtube",
+    "node",
+    "express",
+    "heroku"
+  ],
+  "author": "chris edwards",
+  "license": "Apache",
+  "bugs": {
+    "url": "https://github.com/chrisdevwords/clipr/issues"
+  },
+  "homepage": "https://github.com/chrisdevwords/clipr",
+  "dependencies": {
+    "body-parser": "^1.10.0",
+    "cookie-parser": "^1.3.3",
+    "express": "^4.10.6",
+    "morgan": "^1.5.0",
+    "serve-favicon": "^2.2.0",
+    "swig": "^1.4.2",
+    "underscore": "^1.7.0",
+    "youtube-node": "^1.1.2"
+  },
+  "engines": {
+    "node": "0.10.x"
+  }
+}
