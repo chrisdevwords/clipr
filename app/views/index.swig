@@ -12,8 +12,8 @@
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <link rel="stylesheet" href="public/styles/dist/main.css">
-        <script src="public/scripts/vendor/modernizr-latest.js"></script>
+        <link rel="stylesheet" href="/public/styles/dist/main.css">
+        <script src="/public/scripts/vendor/modernizr-latest.js"></script>
     </head>
     <body>
 
@@ -24,6 +24,12 @@
         {% block content %}
             <p>{{title}}</p>
         {% endblock %}
+
+        {% if serverVars %}
+        <script>
+            window.__SERVER_VARS__ = {%autoescape false%}'{{serverVars|json_encode}}'{%endautoescape%};
+        </script>
+        {% endif %}
         <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js"></script>
         <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.2/backbone-min.js"></script>
