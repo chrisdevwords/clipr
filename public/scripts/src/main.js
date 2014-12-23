@@ -1,16 +1,24 @@
 "use strict";
+var root     = window || root;
+var $        = root.$;
+var _        = root._;
+var Backbone = root.Backbone;
 
-var $        = require('jquery');
-var _        = require('underscore');
-var Backbone = require('backbone');
+ $(function () {
+    
 
-$(function() {
-    var AppView = Backbone.View.extend({
-        el: 'body',
-        initialize: function() {
-            console.log('this is working');
+    var ClipModel = Backbone.Model.extend({
+        urlRoute : '/api/clip' 
+    });
+
+    var BodyView = Backbone.View.extend({
+        el:$('body'),
+        initialize : function() {
+            console.log("view init");
         }
     });
-    var a = new AppView();
-    a.render();
-});
+
+    var body = new BodyView();
+
+ });
+
