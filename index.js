@@ -22,6 +22,8 @@ app.set('port', (process.env.PORT || 5000));
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname , 'public/favicon.ico'));
 //
+app.use(express.static(__dirname +'/public'));
+console.log('----',__dirname +'/public');
 app.use(logger('dev'));
 app.use(body.json());
 app.use(body.urlencoded({extended: false}));
@@ -30,13 +32,14 @@ app.use('/public', express.static(path.join(__dirname , 'public')));
 app.use('/', routes);
 app.use('/api', api);
 
+/*
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
-
+*/
 // error handlers
 
 // development error handler
