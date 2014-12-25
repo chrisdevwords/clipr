@@ -1,2 +1,8 @@
 body {
   background-color: #eeffee; }
+
+#youtube {
+  height: 340px; }
+
+#end_handle, #start_handle, .track {
+  cursor: pointer; }
